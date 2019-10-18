@@ -10,6 +10,10 @@
  * @since 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 ?>
 			<?php astra_content_bottom(); ?>
 
@@ -30,7 +34,6 @@
 	<?php astra_body_bottom(); ?>
 
 	<?php wp_footer(); ?>
-<script src="https://kit.fontawesome.com/bb5058d8c7.js"></script>
 
 	</body>
 </html>

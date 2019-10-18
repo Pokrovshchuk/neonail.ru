@@ -8,13 +8,31 @@
  * @since 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 /**
  * Define Constants
  */
-define( 'ASTRA_THEME_VERSION', '1.8.7' );
+define( 'ASTRA_THEME_VERSION', '2.0.0' );
 define( 'ASTRA_THEME_SETTINGS', 'astra-settings' );
 define( 'ASTRA_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'ASTRA_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
+
+
+/**
+ * Minimum Version requirement of the Astra Pro addon.
+ * This constant will be used to display the notice asking user to update the Astra addon to latest version.
+ */
+define( 'ASTRA_EXT_MIN_VER', '2.0.0' );
+
+/**
+ * Setup helper functions of Astra.
+ */
+require_once ASTRA_THEME_DIR . 'inc/core/class-astra-theme-options.php';
+require_once ASTRA_THEME_DIR . 'inc/core/class-theme-strings.php';
+require_once ASTRA_THEME_DIR . 'inc/core/common-functions.php';
 
 /**
  * Update theme
@@ -22,11 +40,6 @@ define( 'ASTRA_THEME_URI', trailingslashit( esc_url( get_template_directory_uri(
 require_once ASTRA_THEME_DIR . 'inc/theme-update/class-astra-theme-update.php';
 require_once ASTRA_THEME_DIR . 'inc/theme-update/class-astra-pb-compatibility.php';
 
-/**
- * Load theme hooks
- */
-require_once ASTRA_THEME_DIR . 'inc/core/class-astra-theme-options.php';
-require_once ASTRA_THEME_DIR . 'inc/core/class-theme-strings.php';
 
 /**
  * Fonts Files
@@ -38,7 +51,6 @@ if ( is_admin() ) {
 
 require_once ASTRA_THEME_DIR . 'inc/customizer/class-astra-fonts.php';
 
-require_once ASTRA_THEME_DIR . 'inc/core/common-functions.php';
 require_once ASTRA_THEME_DIR . 'inc/core/class-astra-walker-page.php';
 require_once ASTRA_THEME_DIR . 'inc/core/class-astra-enqueue-scripts.php';
 require_once ASTRA_THEME_DIR . 'inc/core/class-gutenberg-editor-css.php';
@@ -138,42 +150,3 @@ if ( version_compare( PHP_VERSION, '5.3', '>=' ) ) {
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
-
-register_nav_menus(array(
-    'top'    => 'Верхнее меню',    //Название месторасположения меню в шаблоне
-    'bottom' => 'Нижнее меню'      //Название другого месторасположения меню в шаблоне
-));
-
-// Регистрирую стили
-wp_register_style( 'bootstrap', get_template_directory_uri() . '/assets/css/minified/bootstrap.min.css', array(), '1', 'screen');
-wp_register_style( 'font-awesome', get_template_directory_uri() . '/assets/css/minified/all.min.css', array(), '1', 'screen');
-wp_register_style( 'custom', get_template_directory_uri() . '/assets/css/custom.css', array(), '1', 'screen');
-
-// Подключаю стили
-wp_enqueue_style( 'custom');
-wp_enqueue_style( 'bootstrap');
-wp_enqueue_style( 'font-awesome');
-
-
-// Регистрирую скрипты
-wp_enqueue_script('modernizr-js', get_template_directory_uri() . '/assets/js/minified/bootstrap.min.js');
-
-add_filter("mime_types", "add_csv_plain");
-function add_csv_plain($mime_types)
-{
-
-    unset($mime_types['txt|asc|c|cc|h|srt']);
-    $mime_types['txt|asc|c|cc|h|srt|csv'] = 'text/plain';
-
-    return $mime_types;
-}
-
-add_filter("woocommerce_csv_product_import_valid_filetypes", "add_csv_plain_woocommerce");
-function add_csv_plain_woocommerce()
-{
-    return [
-        'txt|csv' => 'text/plain',
-        'csv' => 'text/csv',
-    ];
-}
-

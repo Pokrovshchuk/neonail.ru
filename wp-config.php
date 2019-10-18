@@ -20,16 +20,16 @@
 
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
-define( 'DB_NAME', 'new_neonail' );
+define( 'DB_NAME', "new_neonail" );
 
 /** Имя пользователя MySQL */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', "root" );
 
 /** Пароль к базе данных MySQL */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', "" );
 
 /** Имя сервера MySQL */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', "localhost" );
 
 /** Кодировка базы данных для создания таблиц. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -78,7 +78,7 @@ $table_prefix = 'wp_';
  */
 define( 'WP_DEBUG', false );
 
-define (‘ALLOW_UNFILTERED_UPLOADS’, true);
+define ('ALLOW_UNFILTERED_UPLOADS', true);
 
 /* Это всё, дальше не редактируем. Успехов! */
 

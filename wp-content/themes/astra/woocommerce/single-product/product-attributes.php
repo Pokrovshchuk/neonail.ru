@@ -29,5 +29,5 @@ if ( ! $product_attributes ) {
 			<th class="woocommerce-product-attributes-item__label"><?php echo wp_kses_post( $product_attribute['label'] ); ?></th>
 			<td class="woocommerce-product-attributes-item__value"><?php echo wp_kses_post( $product_attribute['value'] ); ?></td>
 		</tr>
-	<?php endforeach; ?>
+	<?php endforeach; ?>reset_variations
 </table>

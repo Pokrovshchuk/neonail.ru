@@ -1,19 +1,447 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    //= template/head.html
 </head>
 <body>
 
-<div class="social-icons">
-    <a href="https://vk.com/neonailru"><i class="fab fa-vk"></i></a>
-    <a href="https://www.facebook.com/neonailrussia/"><i class="fab fa-facebook-square"></i></a>
-    <a href="https://www.instagram.com/neonail_russia/"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.youtube.com/neonailprofessionalrussia"><i class="fab fa-youtube-square"></i></a>
-</div>
+<section id="first-screen">
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="#">Лист ожидания</a>
+                        <a class="nav-item nav-link" href="#">Будильник</a>
+                        <a class="nav-item nav-link" href="#">Пакетное оформление</a>
+                        <a class="nav-item nav-link" href="#">Акции</a>
+                        <a class="nav-item nav-link" href="#">Обратная связь</a>
+                        <a class="nav-item nav-link sign-in" href="#">Войти</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="row service">
+                <div class="col-md-3 service-logo">
+                    <img src="img/logo.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-5 service-name">
+                    <h1>Название сервиса</h1>
+                </div>
+                <div class="col-md-4 service-banner">
+                    <div class="banner"></div>
+                </div>
+            </div>
+            <div class="row search">
+                <div class="col-lg-5 col-md-6">
+                    <div class="row">
+                        <div class="col-md-6"><i class="caret"></i>
+                            <input placeholder="Откуда" type="text" class="select-dropdown">
+                            <ul class="dropdown-content select-dropdown fadeElement">
+                                <li><span></span></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6"><i class="caret"></i>
+                            <input placeholder="Куда" type="text" class="select-dropdown">
+                            <ul class="dropdown-content select-dropdown fadeElement">
+                                <li><span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <input class="date" type="date" id="start" name="trip-start"
+                                   value="Когда"
+                                   min="2019-01-01" max="2019-12-31">
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <input class="date" type="date" id="end" name="trip-end"
+                                           value="Обратно"
+                                           min="2019-01-01" max="2019-12-31">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <button class="btn" type="button">Найти билеты</button>
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+<section id="calendar">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="calendar-heading">Маршрут «туда»</h2>
+                <p class="calendar-subheading">Введите в строке поиска пункт отправления и пункт назначения</p>
+            </div>
+            <div class="col-12">
+                <ul class="calendar calendar-from">
+                    <li>
+                        <p>1</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>2</p>
+                        <p>вт</p>
+                    </li>
+                    <li>
+                        <p>3</p>
+                        <p>ср</p>
+                    </li>
+                    <li>
+                        <p>4</p>
+                        <p>чт</p>
+                    </li>
+                    <li>
+                        <p>5</p>
+                        <p>пт</p>
+                    </li>
+                    <li>
+                        <p>6</p>
+                        <p>сб</p>
+                    </li>
+                    <li>
+                        <p>7</p>
+                        <p>вс</p>
+                    </li>
+                    <li>
+                        <p>8</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>9</p>
+                        <p>вт</p>
+                    </li>
+                    <li>
+                        <p>10</p>
+                        <p>ср</p>
+                    </li>
+                    <li>
+                        <p>11</p>
+                        <p>чт</p>
+                    </li>
+                    <li>
+                        <p>12</p>
+                        <p>пт</p>
+                    </li>
+                    <li>
+                        <p>13</p>
+                        <p>сб</p>
+                    </li>
+                    <li>
+                        <p>14</p>
+                        <p>вс</p>
+                    </li>
+                    <li>
+                        <p>15</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>16</p>
+                        <p>вт</p>
+                    </li>
+                    <li>
+                        <p>17</p>
+                        <p>ср</p>
+                    </li>
+                    <li>
+                        <p>18</p>
+                        <p>чт</p>
+                    </li>
+                    <li>
+                        <p>19</p>
+                        <p>пт</p>
+                    </li>
+                    <li>
+                        <p>20</p>
+                        <p>сб</p>
+                    </li>
+                    <li>
+                        <p>21</p>
+                        <p>вс</p>
+                    </li>
+                    <li>
+                        <p>22</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>23</p>
+                        <p>вт</p>
+                    </li>
+                    <li>
+                        <p>24</p>
+                        <p>ср</p>
+                    </li>
+                    <li>
+                        <p>25</p>
+                        <p>чт</p>
+                    </li>
+                    <li>
+                        <p>26</p>
+                        <p>пт</p>
+                    </li>
+                    <li>
+                        <p>27</p>
+                        <p>сб</p>
+                    </li>
+                    <li>
+                        <p>28</p>
+                        <p>вс</p>
+                    </li>
+                    <li>
+                        <p>29</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>30</p>
+                        <p>вт</p>
+                    </li>
+                </ul>
+                <p class="calendar-month">Январь 2019</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="calendar-heading" 2>Маршрут «обратно»</h2>
+                <p class="calendar-subheading">Введите в строке поиска пункт отправления и пункт назначения</p>
+            </div>
+            <div class="col-12">
+                <ul class="calendar calendar-from">
+                    <li>
+                        <p>1</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>2</p>
+                        <p>вт</p>
+                    </li>
+                    <li>
+                        <p>3</p>
+                        <p>ср</p>
+                    </li>
+                    <li>
+                        <p>4</p>
+                        <p>чт</p>
+                    </li>
+                    <li>
+                        <p>5</p>
+                        <p>пт</p>
+                    </li>
+                    <li>
+                        <p>6</p>
+                        <p>сб</p>
+                    </li>
+                    <li>
+                        <p>7</p>
+                        <p>вс</p>
+                    </li>
+                    <li>
+                        <p>8</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>9</p>
+                        <p>вт</p>
+                    </li>
+                    <li>
+                        <p>10</p>
+                        <p>ср</p>
+                    </li>
+                    <li>
+                        <p>11</p>
+                        <p>чт</p>
+                    </li>
+                    <li>
+                        <p>12</p>
+                        <p>пт</p>
+                    </li>
+                    <li>
+                        <p>13</p>
+                        <p>сб</p>
+                    </li>
+                    <li>
+                        <p>14</p>
+                        <p>вс</p>
+                    </li>
+                    <li>
+                        <p>15</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>16</p>
+                        <p>вт</p>
+                    </li>
+                    <li>
+                        <p>17</p>
+                        <p>ср</p>
+                    </li>
+                    <li>
+                        <p>18</p>
+                        <p>чт</p>
+                    </li>
+                    <li>
+                        <p>19</p>
+                        <p>пт</p>
+                    </li>
+                    <li>
+                        <p>20</p>
+                        <p>сб</p>
+                    </li>
+                    <li>
+                        <p>21</p>
+                        <p>вс</p>
+                    </li>
+                    <li>
+                        <p>22</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>23</p>
+                        <p>вт</p>
+                    </li>
+                    <li>
+                        <p>24</p>
+                        <p>ср</p>
+                    </li>
+                    <li>
+                        <p>25</p>
+                        <p>чт</p>
+                    </li>
+                    <li>
+                        <p>26</p>
+                        <p>пт</p>
+                    </li>
+                    <li>
+                        <p>27</p>
+                        <p>сб</p>
+                    </li>
+                    <li>
+                        <p>28</p>
+                        <p>вс</p>
+                    </li>
+                    <li>
+                        <p>29</p>
+                        <p>пн</p>
+                    </li>
+                    <li>
+                        <p>30</p>
+                        <p>вт</p>
+                    </li>
+                </ul>
+                <p class="calendar-month">Январь 2019</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button class="btn calendar-btn">Найти билеты</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="features">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h2 class="sect-title">Наши укникальные услуги</h2>
+                <p class="sect-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 feature"><img src="feature-image1.jpg" alt="" class="img-fluid feature-image">
+                <p class="feature-name">Лист ожидания</p>
+                <p class="feature-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor</p>
+                <button class="btn feature-btn">Найти нужные билеты</button>
+            </div>
+            <div class="col-md-4 feature"><img src="feature-image2.jpg" alt="" class="img-fluid feature-image">
+                <p class="feature-name">Будильник</p>
+                <p class="feature-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor</p>
+                <button class="btn feature-btn">Найти нужные билеты</button>
+            </div>
+            <div class="col-md-4 feature"><img src="feature-image3.jpg" alt="" class="img-fluid feature-image">
+                <p class="feature-name">Пакетное оформление</p>
+                <p class="feature-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor</p>
+                <button class="btn feature-btn">Найти нужные билеты</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="questions">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="questions-heading">Распространённые вопросы</h2>
+                <div class="col-md-4">
+                    <ul class="nav nav-tabs md-tabs" id="myTabMD" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#home-md" role="tab" aria-controls="home-md"
+                               aria-selected="true">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#profile-md" role="tab" aria-controls="profile-md"
+                               aria-selected="false">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#contact-md" role="tab" aria-controls="contact-md"
+                               aria-selected="false">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content card pt-5" id="myTabContentMD">
+                        <div class="tab-pane fade show active" id="home-md" role="tabpanel" aria-labelledby="home-tab-md">
+                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                                retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+                                Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry
+                                richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american
+                                apparel, butcher voluptate nisi qui.</p>
+                        </div>
+                        <div class="tab-pane fade" id="profile-md" role="tabpanel" aria-labelledby="profile-tab-md">
+                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+                                Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+                                farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip
+                                jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna
+                                delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan
+                                fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry
+                                richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus
+                                tattooed echo park.</p>
+                        </div>
+                        <div class="tab-pane fade" id="contact-md" role="tabpanel" aria-labelledby="contact-tab-md">
+                            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+                                retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+                                iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+                                Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles
+                                pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+                                them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Содержимое вкладок -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane" id="home">qaeqweqw</div>
+                        <div role="tabpanel" class="tab-pane" id="profile">123123124</div>
+                        <div role="tabpanel" class="tab-pane" id="messages">sdfgdfh</div>
+                        <div role="tabpanel" class="tab-pane" id="settings">jklk;jkl</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
